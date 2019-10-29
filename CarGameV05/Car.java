@@ -20,12 +20,12 @@ public class Car extends Tile
         if(!right)
         {
             setRotation(180);
-            speed = Greenfoot.getRandomNumber(6)+5;
+            speed = Greenfoot.getRandomNumber(10)+6;
         }
         else
         {
             setRotation(0);
-            speed = Greenfoot.getRandomNumber(3)+1;
+            speed = Greenfoot.getRandomNumber(5) + 1;
         }
     }
     public void act() 
