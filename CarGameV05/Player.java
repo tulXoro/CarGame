@@ -65,29 +65,29 @@ public class Player extends Actor
             collisions();
             
             
-            if(Greenfoot.isKeyDown("Up") || Greenfoot.isKeyDown("W"))
+            if(Greenfoot.isKeyDown("Up"))
             {
                 setRotation(-turning);
                 setLocation(getX(), getY()-5);
                 forward=true;
                 touchingObs();
             }//end of Up
-            else if(Greenfoot.isKeyDown("Down") || Greenfoot.isKeyDown("S"))
+            else if(Greenfoot.isKeyDown("Down"))
             {
                 setRotation(turning);
                 setLocation(getX(), getY()+5);
                 forward=false;
                 touchingObs();
             }
-            else if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("A"))
+            else if(Greenfoot.isKeyDown("left"))
             {
                 setRotation(0);
-                move(-speed+2);
+                move(-speed/2);
             }
             else
             {
                 setRotation(0);
-                if(Greenfoot.isKeyDown("right")  || Greenfoot.isKeyDown("D"))
+                if(Greenfoot.isKeyDown("right"))
                 {
                     move(speed);
                 }

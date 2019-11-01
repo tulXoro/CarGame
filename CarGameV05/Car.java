@@ -15,17 +15,21 @@ public class Car extends Tile
     int speed = 0;
     public Car(boolean right)
     { 
+        int temp = Greenfoot.getRandomNumber(10);
         GreenfootImage car = getImage();   
+        
         setImage(car);
+        if(temp%2==0)
+            setImage("car01.png");
         if(!right)
         {
             setRotation(180);
-            speed = Greenfoot.getRandomNumber(10)+6;
+            speed = Greenfoot.getRandomNumber(6)+5;
         }
         else
         {
             setRotation(0);
-            speed = Greenfoot.getRandomNumber(5) + 1;
+            speed = Greenfoot.getRandomNumber(3)+1;
         }
     }
     public void act() 
